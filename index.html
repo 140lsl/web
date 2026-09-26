@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Leaf's Cosmos · 宇宙主页</title>
+<meta name="description" content="Leaf 的个人宇宙 —— 计算机 · 教育 · 创作。第一模块：3D 交互星系。托管于 GitHub Pages。" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='68' font-size='72' text-anchor='middle' fill='%237c6aef'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 载入幕 -->
+<div id="loader">
+  <div class="loader-star">✦</div>
+  <div class="loader-text">ENTERING LEAF'S COSMOS</div>
+</div>
+
+<!-- 3D 模块挂载点 -->
+<div id="scene-root" aria-label="3D 宇宙模块"></div>
+
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- 顶部：品牌 + 模块导航 -->
+<header class="hud hud-top">
+  <div class="brand">
+    <span class="brand-mark">✦</span>
+    <div>
+      <div class="brand-name">LEAF'S COSMOS</div>
+      <div class="brand-sub">GITHUB · HOME</div>
+    </div>
+  </div>
+  <nav class="modules" aria-label="站点模块">
+    <a class="module active" href="#"><span class="dot"></span>3D 宇宙</a>
+    <!-- 后续模块占位：实现后在 js/cosmos.js 的 MODULES 注册并替换 -->
+    <span class="module soon">关于<em>SOON</em></span>
+    <span class="module soon">项目<em>SOON</em></span>
+    <span class="module soon">书房<em>SOON</em></span>
+  </nav>
+</header>
+
+<!-- 左下：个人签名区 -->
+<section class="hud hud-left">
+  <p class="eyebrow">YOU DRIFTED INTO MY UNIVERSE</p>
+  <h1>Leaf<span class="h1-dot">.</span></h1>
+  <p class="tagline">计算机专业在读 · 教育培训教师 · 长篇写作者</p>
+  <p class="intro">用代码造星，用文字造界。这里是我的数字宇宙 ——<br/>轨道上的每一颗卫星，都是一个正在进行的项目。</p>
+  <div class="links">
+    <!-- TODO: 替换为你的 GitHub 用户名 -->
+    <a href="https://github.com/yourname" target="_blank" rel="noopener">GITHUB ↗</a>
+    <a class="soon-link" href="#" onclick="return false">MORE SOON</a>
+  </div>
+</section>
+
+<!-- 右下：发光数据 -->
+<aside class="hud hud-stats" aria-label="个人数据">
+  <div class="stat"><span class="num" data-count="237">0</span><span class="label">GODOT DEMOS</span></div>
+  <div class="stat"><span class="num" data-count="83">0</span><span class="label">备考课件 · 节</span></div>
+  <div class="stat"><span class="num" data-count="300">0</span><span class="label">小说章节 · 计划</span></div>
+  <div class="stat"><span class="num" data-count="65000" data-format="w">0</span><span class="label">艺图语 · 张</span></div>
+</aside>
+
+<!-- 底栏 -->
+<footer class="hud hud-bottom">
+  <span class="hint">拖拽旋转 · 滚轮缩放 · 悬停卫星查看项目 · 点击发送脉冲</span>
+  <span class="copy">© 2026 LEAF · POWERED BY GITHUB PAGES</span>
+</footer>
+
+<!-- 悬浮信息卡 -->
+<div id="tooltip" class="tooltip" role="tooltip"><b></b><i></i></div>
+
+<!-- 普通脚本（esbuild IIFE 打包）：file:// 双击与 GitHub Pages 均可运行 -->
+<script src="js/cosmos.bundle.js"></script>
+</body>
+</html>
